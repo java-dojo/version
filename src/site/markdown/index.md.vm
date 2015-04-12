@@ -1,0 +1,60 @@
+# Task
+
+Your task is to implement the missing methods in the class `Version` (also note
+that there may be some methods needed that have no definition now).
+
+# Specification
+
+The class `Version` represents a version. A version has the format `X[.Y[.Z]]`.
+
+Each part (`X`, `Y`, `Z`) is a [natural number][wpnn].
+
+The first part (`X`) is mandatory.
+
+The second part (`Y`) can be omitted if it is `0` and the third part (`Z`) is
+also omitted.
+
+The third part (`Z`) can be omitted if it is `0`.
+
+The `toString()` method must return a `String` that can be parsed again and
+represents the same version as parsed (the `equals()` method must return `true`
+and the `compareTo()` method must return `0`).
+
+Two versions are considered equal if all three parts are the equal (missing
+parts are considered as `0`).
+
+When comparing two versions the parts are compared in order (first `X` then `Y`
+and then `Z`). If a part differs then an according result must be returned by
+`compareTo()`.
+
+If the method `parse` cannot handle the supplied `String` the an
+`IllegalArgumentException` must be thrown.
+
+# Examples
+
+Some examples of comparisons of two versions:
+
+* `1 == 1.0`
+* `1 == 1.0.0`
+* `1.0.0 < 1.0.1`
+* `1.0.0 < 1.1`
+* `1.0 < 2.0`
+* `1.2 < 2.0`
+
+# Support
+
+To support you with implementing the methods there are unit tests in
+`VersionTest`. The unit tests are disabled at the start. To use them you have to
+enable them.
+
+# Further Challenges
+
+A similar exercise with further challenges can be found in
+[Advanced Version][av].
+
+# Development Requirements
+
+  To perform this exercise you need a JDK 8 and Maven 3.3.x.
+
+[wpnn]: https://en.wikipedia.org/wiki/Natural_number "Wikipedia - Natural number"
+[av]: https://java-dojo.github.io/advanced-version "Advanced Version"
