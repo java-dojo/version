@@ -1,3 +1,4 @@
-# Version
+# #movetogitlab
 
-The documentation is found on the [project page](https://java-dojo.github.io/version).
+This repository is moved to https://git.sw4j.net/java-dojo/version with a mirror at
+https://gitlab.com/java-dojo/version
